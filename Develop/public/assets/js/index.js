@@ -19,6 +19,15 @@ if (window.location.pathname === '/notes') {
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
+mysql.createConnection(connectionObj);
+
+connecion.connecion(error =>{
+  if (error){
+    throw error;
+  }
+  console.log(`connected to the db as id ${connecion.threadId}`);
+  connecion.end();
+})
 
 // Show an element
 const show = (elem) => {
