@@ -1,3 +1,4 @@
+const fs = require('fs');
 const mysql = require("mysql");
 const connectionObj = {
   host:'localhost',
