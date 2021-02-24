@@ -1,3 +1,7 @@
+const mysql = require("mysql");
+const connectionObj = {
+  host:`localhost`
+};
 let noteTitle;
 let noteText;
 let saveNoteBtn;
