@@ -1,6 +1,10 @@
 const mysql = require("mysql");
 const connectionObj = {
-  host:`localhost`
+  host:'localhost',
+  port: 3306,
+  user: 'root',
+  password: '12345678',
+  database: 'notes_db'
 };
 let noteTitle;
 let noteText;
