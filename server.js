@@ -3,7 +3,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-
+let note =[];
 //set up express
 
 const app = express();
@@ -17,15 +17,17 @@ app.use(express.json());
 //sets up express app to work with static files
 app.use(express.static('public'));
 
+
 //routes
 //get route note
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/notes.html")));
 
+// api note route
+app.get('/api/notes', (req, res) => res.json(note));
+
 //get routes
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
 
-// app.get('/api/notes')
-//app.get('/api/notes', (req, res) => res.json(notes));
 
 // app.post('/api/notes'
 //app.post('/api/notes', (req, res) => {
