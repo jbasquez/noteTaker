@@ -18,10 +18,12 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //routes
-//get routes
-app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
 //get route note
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/notes.html")));
+
+//get routes
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
+
 // app.get('/api/notes')
 //app.get('/api/notes', (req, res) => res.json(notes));
 
