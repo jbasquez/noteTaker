@@ -19,24 +19,24 @@ app.use(express.static('public'));
 
 //routes
 //get routes
-app.get('/', (req, res) => res.sendFile(path.join("./public/index.html")));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
 //get route note
-app.get('/notes', (req, res) => res.sendFile(path.join("./public/notes.html")));
+//app.get('/notes', (req, res) => res.sendFile(path.join("./public/notes.html")));
 // app.get('/api/notes')
-app.get('/api/notes', (req, res) => res.json(notes));
+//app.get('/api/notes', (req, res) => res.json(notes));
 
 // app.post('/api/notes'
-app.post('/api/notes', (req, res) => {
+//app.post('/api/notes', (req, res) => {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
-    const newNote = req.body;
+//     const newNote = req.body;
  
-    newNote.routeName = newNote.name.toLowerCase();
-    console.log(newNote);
+//     newNote.routeName = newNote.name.toLowerCase();
+//     console.log(newNote);
   
-    noteListItems.push(newNote);
-    res.json(newNote);
-  });
+//     noteListItems.push(newNote);
+//     res.json(newNote);
+//   });
   
 //app.delete('/api/not') CRUD
 
