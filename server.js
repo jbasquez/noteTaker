@@ -13,3 +13,13 @@ const PORT = 8888;
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+//sets up express app to work with static files
+app.use(express.static('public'));
+
+//routes
+
+
+// Starts the server to begin listening
+
+app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
