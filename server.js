@@ -20,6 +20,14 @@ app.use(express.static('public'));
 //routes
 //get routes
 app.get('/', (req, res) => res.sendFile(path.join("./public/index.html")));
+//get route note
+app.get('/notes', (req, res) => res.sendFile(path.join("./public/notes.html")));
+// app.get('/api/notes')
+app.get('/api/notes', (req, res) => res.json(notes));
+
+// app.post('/api/notes'
+
+//app.delete('/api/not') CRUD
 
 // Starts the server to begin listening
 
