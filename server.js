@@ -18,7 +18,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 //routes
-
+//get routes
+app.get('/', (req, res) => res.sendFile(path.join("./public/index.html")));
 
 // Starts the server to begin listening
 
