@@ -30,17 +30,16 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/i
 
 
 // app.post('/api/notes'
-//app.post('/api/notes', (req, res) => {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-//     const newNote = req.body;
+app.post('/api/notes', (req, res) => {
+
+    const newNote = req.body;
  
-//     newNote.routeName = newNote.name.toLowerCase();
-//     console.log(newNote);
+    newNote.routeName = newNote.name.toLowerCase();
+    console.log(newNote);
   
-//     noteListItems.push(newNote);
-//     res.json(newNote);
-//   });
+    noteListItems.push(newNote);
+    res.json(newNote);
+  });
   
 //app.delete('/api/not') CRUD
 

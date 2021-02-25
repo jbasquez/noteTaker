@@ -12,14 +12,6 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-connecion.connecion(error =>{
-  if (error){
-    throw error;
-  }
-  console.log(`connected to the db as id ${connecion.threadId}`);
-  connecion.end();
-})
-
 // Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
