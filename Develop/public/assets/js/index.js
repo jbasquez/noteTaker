@@ -1,12 +1,5 @@
 const fs = require('fs');
-const mysql = require("mysql");
-const connectionObj = {
-  host:'localhost',
-  port: 3306,
-  user: 'root',
-  password: '12345678',
-  database: 'notes_db'
-};
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -20,7 +13,6 @@ if (window.location.pathname === '/notes') {
   newNoteBtn = document.querySelector('.new-note');
   noteList = document.querySelectorAll('.list-container .list-group');
 }
-mysql.createConnection(connectionObj);
 
 connecion.connecion(error =>{
   if (error){
