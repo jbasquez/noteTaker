@@ -20,13 +20,13 @@ app.use(express.static('public'));
 
 //routes
 //get route note
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/notes.html")));
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname + "/public/notes.html")));
 
 // api note route
 app.get('/api/notes', (req, res) => res.json(note));
 
 //get routes
-app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/public/index.html")));
 
 
 //pp.post('/api/notes'
