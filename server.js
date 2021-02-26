@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 //sets up express app to work with static files
-app.use(express.static(__dirname + 'public'));
+app.use(express.static('public'));
 
 
 //routes
