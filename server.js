@@ -7,7 +7,7 @@ let note =[];
 //set up express
 
 const app = express();
-const PORT = 8888;
+const PORT = 3009;
 
 // data parsing
 
