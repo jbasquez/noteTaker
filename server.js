@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 //sets up express app to work with static files
-app.use(express.static('public'));
+app.use(express.static(__dirname + 'public'));
 
 
 //routes
@@ -29,17 +29,17 @@ app.get('/api/notes', (req, res) => res.json(note));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/Develop/public/index.html")));
 
 
-// app.post('/api/notes'
-app.post('/api/notes', (req, res) => {
+//pp.post('/api/notes'
+// app.post('/api/notes', (req, res) => {
 
-    const newNote = req.body;
+//     const newNote = req.body;
  
-    newNote.routeName = newNote.name.toLowerCase();
-    console.log(newNote);
+//     newNote.routeName = newNote.name.toLowerCase();
+//     console.log(newNote);
   
-    noteListItems.push(newNote);
-    res.json(newNote);
-  });
+//     noteListItems.push(newNote);
+//     res.json(newNote);
+//   });
   
 //app.delete('/api/not') CRUD
 
