@@ -30,16 +30,16 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname + "/public/index.htm
 
 
 //pp.post('/api/notes'
-// app.post('/api/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
 
-//     const newNote = req.body;
+    const newNote = req.body;
  
-//     newNote.routeName = newNote.name.toLowerCase();
-//     console.log(newNote);
+    newNote.routeName = newNote.name;
+    console.log(newNote);
   
-//     noteListItems.push(newNote);
-//     res.json(newNote);
-//   });
+    noteListItems.push(newNote);
+    res.json(newNote);
+  });
   
 //app.delete('/api/not') CRUD
 
